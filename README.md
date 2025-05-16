@@ -3,17 +3,15 @@ Sadiqplatform.com é um projeto realizado por auto experiência e conhecimento, 
 
 Repositorio com todas as versões do website da sadiqplatform.com.
 
-Arquitetura v1-sadiqplatform:
+Arquitetura v1.updated-sadiqplatform:
 (tree)
 
 ```
 /index.html
-/WebsiteV1Layout.png
 /public
   /img
     /locoicon.jpg
     /logo.jpg
-    /test.jpg
   /styles.css
 /script
   /script.js
