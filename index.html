@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sadiq Platform</title>
+  <link rel="stylesheet" href="./public/styles.css" />
+  <link rel="icon" type="image/x-icon" href="./public/img/locoicon.jpg">
+</head>
+<body>
+
+  <nav class="navbar">
+    <!-- <div class="logo">
+      <a href="#home"><img src="./public/img/locoicon.jpg" alt="Logo" /></a>
+    </div> -->
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="#home">Início</a></li>
+      <li><a href="#about-us">Sobre</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <img src="./public/img/locoicon.jpg" class="hero-logo" alt="Hero Logo" />
+    <h1>Bem-vindo à Sadiq Platform</h1>
+    <p>Criação de websites, marketing e inovação digital.</p>
+    <button class="btn"><a href="https://sadiqplatform.gitbook.io/sadiqplatform.com/geral/sobre-nos" target="_blank">Aceder à Documentação</a></button>
+  </section>
+
+  <section class="about" id="about-us">
+    <h2>Sobre nós</h2>
+
+    <div class="about-block">
+      <h3>Quem somos?</h3>
+      <p>
+        A Sadiqplatform é uma plataforma que presta serviços com o pensamento focado na sua empresa, promovendo a sua visibilidade e notoriedade no mercado. Queremos ser a sua solução!
+      </p>
+      <p class="quote">
+        "Estamos presentes desde o momento do plano/estudo do mercado, à execução de todo o conteúdo digital, ao website/app e marketing, e finalizamos com a divulgação e promoção do produto final."
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h3>Onde estamos?</h3>
+      <p>A Sadiqplatform é desenvolvida a nível nacional, Portugal.</p>
+    </div>
+
+    <div class="about-block">
+      <h3>Apoios</h3>
+      <p>
+        A nossa plataforma contribui para o apoio a pequenas, médias e grandes empresas, assim como a particulares, parceiros diretos e startups. Disponibilizamos diversos recursos para o seu negócio, garantindo sempre a máxima confiança e lealdade.
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Serviços</h2>
+
+    <div class="service">
+      <h3>Criação de Websites</h3>
+      <p>
+        Criamos desde a estrutura até ao design do seu website. Definimos todos os parâmetros necessários para que o seu negócio tenha mais visibilidade. Um website promove maior confiança e contacto direto com novos clientes.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Criação de App</h3>
+      <p>
+        Se deseja criar uma App e não sabe como, a Sadiqplatform desenvolve aplicações rentáveis e produtivas para o seu negócio.
+      </p>
+      <ul>
+        <li>App para clientes</li>
+        <li>App de gestão própria</li>
+        <li>App para análise de dados</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <h3>Criação de Robot para WhatsApp e Telegram</h3>
+      <p>
+        Um robot de mensagens auxilia na resposta automática às mensagens da empresa, garantindo atendimento imediato, confortável e eficiente para os seus clientes.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Gestão de Redes Sociais</h3>
+      <p>Em breve.</p>
+    </div>
+
+    <div class="service">
+      <h3>Marketing Digital & Físico</h3>
+      <p>Em breve.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="contact">
+    <button onclick="toggleAnswer('faq1')">Quais serviços vocês oferecem?</button>
+    <div id="faq1" class="answer">Oferecemos web design, branding, SEO, campanhas digitais e mais.</div>
+
+    <button onclick="toggleAnswer('faq2')">Como posso entrar em contato?</button>
+    <div id="faq2" class="answer">Pode contactar-nos via e-mail: <a href="mailto:sadiqmasterdevil@gmail.com">Email</a></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Sadiq Platform. Todos os direitos reservados. <a href="https://sadiqplatform.gitbook.io/sadiqplatform.com/geral/politica-de-privacidade." target="_blank">Política de Privacidade</a></p>
+  </footer>
+
+  <script>
+    // Toggle menu mobile
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Fecha o menu quando um link for clicado
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Toggle FAQ
+    function toggleAnswer(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
