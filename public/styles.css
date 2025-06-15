@@ -141,6 +141,41 @@ ul {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+.partners-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  justify-content: center; /* Centraliza quando o ecrã é grande */
+  flex-wrap: wrap; /* Permite quebra para nova linha se necessário */
+}
+
+/* Parceiro: Imagem redonda e texto centrado */
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.partner img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+  transition: transform 0.3s;
+}
+
+.partner img:hover {
+  transform: scale(1.1);
+}
+
+.partner p {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .about,
 .services {
   padding: 80px 20px;
@@ -264,6 +299,8 @@ ul {
   font-weight: 400;
 }
 
+
+
 /* Responsivo */
 @media screen and (max-width: 768px) {
   .navbar {
@@ -324,5 +361,25 @@ ul {
 
   .about-block h3 {
     font-size: 20px;
+  }
+}
+
+/* Comportamento responsivo: scroll lateral apenas em ecrãs pequenos */
+@media (max-width: 768px) {
+  .partners-scroll {
+    overflow-x: auto;
+    flex-wrap: nowrap; /* Força tudo numa linha com scroll */
+    justify-content: flex-start; /* Alinha à esquerda para scroll */
+    scroll-behavior: smooth;
+  }
+
+  /* Opcional: Esconder a scrollbar no Chrome, Safari e Edge */
+  .partners-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Opcional: Esconder a scrollbar no Firefox */
+  .partners-scroll {
+    scrollbar-width: none;
   }
 }
