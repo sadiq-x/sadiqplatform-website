@@ -18,3 +18,5 @@ Arquitetura v1-sadiqplatform:
 /script
   /script.js
 ```
+
+v1.updated-sadiqplatform - Website upload.
