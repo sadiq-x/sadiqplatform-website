@@ -150,11 +150,23 @@ ul {
 }
 
 /* Parceiro: Imagem redonda e texto centrado */
-.partner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 auto;
+.partners {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 40px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.partners h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--violet);
+  text-shadow: var(--text-shadow);
 }
 
 .partner img {
