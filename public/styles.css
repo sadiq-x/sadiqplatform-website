@@ -1,7 +1,10 @@
+/* Importar fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* Paleta e sombras globais */
 :root {
   --violet: #a259ff;
+  --violet-hover: #8b3dff;
   --white-soft: #f7f7f7;
   --gray-dark: #2b2b2b;
   --gray-light: #666666;
@@ -9,10 +12,15 @@
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +31,7 @@ body {
   font-weight: 300;
 }
 
+/* Links */
 a {
   color: var(--violet);
   text-decoration: none;
@@ -31,14 +40,16 @@ a {
 }
 
 a:hover {
-  color: #8336ff;
+  color: var(--violet-hover);
   text-shadow: var(--text-shadow);
 }
 
+/* Listas sem marcadores */
 ul {
-  list-style-type: none;
+  list-style: none;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -58,6 +69,7 @@ ul {
   box-shadow: var(--box-shadow);
 }
 
+/* Menu hamburguer mobile */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -65,8 +77,8 @@ ul {
   cursor: pointer;
 }
 
+/* Links de navegação */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 25px;
 }
@@ -84,14 +96,13 @@ ul {
   box-shadow: var(--box-shadow);
 }
 
+/* Hero Section */
 .hero {
-  margin-top: 120px;
-  text-align: center;
+  margin: 120px 20px 0 20px;
   padding: 80px 20px;
+  text-align: center;
   background-color: #fff;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
   box-shadow: var(--box-shadow);
 }
 
@@ -106,67 +117,65 @@ ul {
   font-size: 36px;
   font-weight: 700;
   text-shadow: var(--text-shadow);
-  color: var(--gray-dark);
 }
 
 .hero p {
   font-size: 18px;
-  font-weight: 300;
   color: var(--gray-light);
   margin-bottom: 20px;
 }
 
+/* Botão */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 28px;
   font-size: 16px;
   background-color: var(--violet);
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-weight: 500;
+  transition: all 0.3s ease;
   box-shadow: var(--box-shadow);
 }
 
-.btn a {
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-}
-
 .btn:hover {
-  background-color: #8b3dff;
+  background-color: var(--violet-hover);
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.partners-scroll {
-  display: flex;
-  gap: 30px;
-  padding: 20px 0;
-  justify-content: center; /* Centraliza quando o ecrã é grande */
-  flex-wrap: wrap; /* Permite quebra para nova linha se necessário */
+.btn a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Parceiro: Imagem redonda e texto centrado */
+/* Parceiros */
 .partners {
+  margin: 40px 20px 0 20px;
   padding: 80px 20px;
-  text-align: center;
   background-color: #fff;
-  margin-top: 40px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  text-align: center;
   box-shadow: var(--box-shadow);
 }
 
 .partners h2 {
   font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
   color: var(--violet);
   text-shadow: var(--text-shadow);
+  margin-bottom: 20px;
+}
+
+.partners-scroll {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 .partner img {
@@ -185,28 +194,25 @@ ul {
 .partner p {
   margin-top: 10px;
   font-weight: bold;
-  text-align: center;
 }
 
+/* About e Services */
 .about,
 .services {
+  margin: 40px 20px 0 20px;
   padding: 80px 20px;
-  text-align: center;
   background-color: #fff;
-  margin-top: 40px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  text-align: center;
   box-shadow: var(--box-shadow);
 }
 
 .about h2,
 .services h2 {
   font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
   color: var(--violet);
   text-shadow: var(--text-shadow);
+  margin-bottom: 20px;
 }
 
 .about p,
@@ -217,20 +223,21 @@ ul {
   color: var(--gray-light);
 }
 
+/* About Us Blocos */
 .about-us {
+  margin: 60px 20px 0 20px;
   padding: 80px 20px;
   background-color: var(--white-soft);
-  text-align: center;
   border-radius: 20px;
-  margin: 60px 20px 0 20px;
+  text-align: center;
   box-shadow: var(--box-shadow);
 }
 
 .about-us h2 {
   font-size: 42px;
   color: var(--violet);
-  margin-bottom: 40px;
   text-shadow: var(--text-shadow);
+  margin-bottom: 40px;
 }
 
 .about-block {
@@ -261,6 +268,7 @@ ul {
   margin-top: 20px;
 }
 
+/* FAQ */
 .faq button {
   display: block;
   width: 100%;
@@ -295,6 +303,7 @@ ul {
   box-shadow: var(--box-shadow);
 }
 
+/* Footer */
 .footer {
   background-color: var(--white-soft);
   text-align: center;
@@ -311,14 +320,11 @@ ul {
   font-weight: 400;
 }
 
-
-
-/* Responsivo */
-@media screen and (max-width: 768px) {
+/* Responsivo geral */
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     padding: 10px;
-    height: auto;
     gap: 10px;
   }
 
@@ -353,7 +359,7 @@ ul {
   .hero p {
     font-size: 16px;
   }
-  
+
   .btn {
     font-size: 14px;
     padding: 12px 24px;
@@ -374,24 +380,23 @@ ul {
   .about-block h3 {
     font-size: 20px;
   }
-}
 
-/* Comportamento responsivo: scroll lateral apenas em ecrãs pequenos */
-@media (max-width: 768px) {
   .partners-scroll {
     overflow-x: auto;
-    flex-wrap: nowrap; /* Força tudo numa linha com scroll */
-    justify-content: flex-start; /* Alinha à esquerda para scroll */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     scroll-behavior: smooth;
   }
 
-  /* Opcional: Esconder a scrollbar no Chrome, Safari e Edge */
   .partners-scroll::-webkit-scrollbar {
     display: none;
   }
 
-  /* Opcional: Esconder a scrollbar no Firefox */
   .partners-scroll {
     scrollbar-width: none;
+  }
+
+  .partner {
+    width: 140px;
   }
 }
